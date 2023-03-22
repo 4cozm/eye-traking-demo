@@ -1,0 +1,97 @@
+:root{
+    --blue_color:#049DD9;
+    --sky_color:#04B2D9;
+    --teal_color:#037F8C;
+    --yello_color:#D9A404;
+    --sand_color:#D9985F;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+body{
+    font-family: 'Noto Sans KR',sans-serif;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+#main-line{
+    background-color: black;
+    width: 2px;
+    height: 90vh;
+    border-radius: 10px;
+}
+#side-bar{
+    width: 30vw;
+    height: 100vh;
+}
+#side-bar-title-container{
+    height: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0px;
+    margin-top: 50px;
+}
+#side-bar-title{
+    font-size: 50px;
+}
+#side-bar-item-container{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.side-bar-items{
+    margin-top: 40px;
+    padding:20px;
+    font-size: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+#main-content{
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-content-circle{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: relative;
+}
+#main-content-circle > div{
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+#main-content-circle > div > p{
+    font-size: 20px;
+}
+#content-1{
+    top: -152px;
+    left: 75px;
+}
+#content-2{
+    bottom: -90px;
+    left: 230px;
+}
+#content-3{
+    top: 0px;
+    left: -140px;
+}
+#content-4{
+    top: 0px;
+    right:-140px;
+
+}
+#content-5{
+    bottom: -90px;
+    right: 230px;
+}
