@@ -40,6 +40,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    list-style:none;
 }
 .side-bar-items{
     margin-top: 40px;
@@ -47,6 +48,7 @@ body{
     font-size: 40px;
     border: 2px solid black;
     border-radius: 5px;
+    list-style: none;
     transition:box-shadow 0.5s ease-in-out;
 }
 .side-bar-items:hover{
@@ -64,8 +66,9 @@ body{
     width: 300px;
     border-radius: 50%;
     position: relative;
+    list-style: none;
 }
-#main-content-circle > div{
+#main-content-circle > li{
     height: 150px;
     width: 150px;
     border: 2px solid black;
@@ -74,23 +77,9 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    transition: shadow 1s ease-in-out;
+    list-style: none;
 }
-@keyframes shadow{
-    0%{
-        box-shadow: 0 0 0 0 var(--blue_color);
-    }
-    50%{
-        box-shadow: 0 0 0 10px var(--blue_color);
-    }
-    100%{
-        box-shadow: 0 0 0 20px var(--blue_color);
-    }
-}
-#main-content-circle >div:hover{
-    animation: shadow 1s forwards;
-}
-#main-content-circle > div > p{
+#main-content-circle > li > p{
     font-size: 20px;
 }
 #content-1{
