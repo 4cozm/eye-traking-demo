@@ -1,20 +1,22 @@
-let divElement = document.querySelector('.side-bar-items');
-let isMouseOver = false;
-let clickTimeout;
+const Check3s = document.querySelectorAll('.hover-to-click');
 
-divElement.addEventListener('mouseover',function(){
-    isMouseOver = true;
-    clickTimeout = setTimeout(function(){
-        handleClick();
-    },3000);
+Check3s.forEach(function(Check){
+    let isMouseOver = false;
+    let clicktimeout;
+
+    Check.addEventListener('mouseover',function(){
+        isMouseOver = true;
+        clicktimeout = setTimeout(function(){
+            handleClick(Check);
+        },3000);
+    });
+
+    Check.addEventListener('mouseout',function(){
+        isMouseOver = false;
+        clearTimeout(clicktimeout);
+    });
+
+    function handleClick(Check){
+        console.log(`마우스가 ${Check.textContent}에 3초 이상 머무름`);
+    }
 });
-
-divElement.addEventListener('mouseout',function(){
-    isMouseOver = false;
-    clearTimeout(clickTimeout);
-});
-
-function handleClick(){
-    console.log("마우스가 div에 3초이상 머무름");
-}
-
