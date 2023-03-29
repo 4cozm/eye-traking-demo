@@ -20,3 +20,11 @@ Check3s.forEach(function(Check){
         console.log(`마우스가 ${Check.textContent}에 3초 이상 머무름`);
     }
 });
+
+var videos = document.getElementsByClassName("side-bar-video");
+
+Array.from(videos).forEach(function(video){
+    video.onended = function(){
+        window.location.hash="";
+    };
+});
