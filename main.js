@@ -18,6 +18,7 @@ Check3s.forEach(function(Check){
 
     function handleClick(Check){
         console.log(`마우스가 ${Check.textContent}에 3초 이상 머무름`);
+        Check.click();
     }
 });
 
