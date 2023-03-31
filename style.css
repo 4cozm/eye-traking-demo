@@ -5,9 +5,14 @@
     --yello_color:#D9A404;
     --sand_color:#D9985F;
 }
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 body{
-    font-family: 'Noto Sans KR',sans-serif;
+    font-family: 'TheJamsil5Bold',sans-serif;
     display: flex;
     align-items: center;
     width: 100vw;
@@ -44,7 +49,6 @@ body{
 }
 .side-bar-items{
     text-decoration: none;
-    color:inherit;
     margin-top: 40px;
     padding:20px;
     font-size: 40px;
@@ -52,9 +56,17 @@ body{
     border-radius: 5px;
     list-style: none;
     transition:box-shadow 0.5s ease-in-out;
+    background-image: url(background.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: -100px -300px;
+    color: black;
+    transition: 2s ease-in-out;
 }
 .side-bar-items:hover{
-    box-shadow: 0 2px 10px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px 5px var(--sky_color);
+    color: transparent;
+    background-position: 100px 100px;
 }
 .side-bar-item-popup{
     position: fixed;
@@ -142,3 +154,8 @@ body{
 .giho{
     margin:50px;
 }
+
+
+
+
+/* test */
