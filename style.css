@@ -17,7 +17,37 @@ body{
     align-items: center;
     width: 100vw;
 }
-
+#nudge-page{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+#nudge-page >div{
+    display: flex;
+    margin-top:100px;
+}
+.nudge-first{ /* display none<->block */
+    color:white;
+    font-size: 128px;
+}
+.nudge-second{ /* display none<->block */
+    display: none;
+    color:white;
+    font-size: 100px;
+    margin-top:100px;
+}
+.nudged{ /*마우스가 움직일때 해당 속성이 추가됨 */
+    display:none;
+}
+.nudged:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
 #main-line{
     background-color: black;
     width: 2px;

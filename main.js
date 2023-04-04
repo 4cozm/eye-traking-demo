@@ -29,3 +29,20 @@ Array.from(videos).forEach(function(video){
         window.location.hash="";
     };
 });
+
+const nudge=document.getElementById("nudge-page");
+
+function appear(event){
+    console.log("어떻게든 이벤트 발생");
+}
+
+
+
+/*
+1.마우스가 움직이면 classList.add('nudged')를 추가한다(1회성)
+2.마우스가 움직이지 않은 시간을 감지하는 resetTimer를 추가한다.
+3.nudged 클래스를 부여 한 후,nudged가 Hover일때 nudged-first클래스를 display:none으로 바꾼다
+4.nudged-second를 display:flex속성을 부여한다
+5.nudged-sceond에 display:none속성을 부여한다.
+6.마우스를 움직이지 않아서 resetTimer가 실행되면 1번 1회성 classList.add를 복구하고 nudged-first,nudged-second를 dispalay:None으로 변경
+*/
