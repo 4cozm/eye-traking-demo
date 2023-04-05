@@ -1,0 +1,17 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nudge{
+    color: white;
+    font-size: 128px;
+}
+.nudge-container{
+    display: flex;
+    margin-top: 100px;
+}

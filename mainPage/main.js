@@ -1,3 +1,16 @@
+// 20초간 입력이 없으면 firstNudge로 넘어감
+let hoverTimer;
+document.addEventListener("mouseover", function () {
+  if (hoverTimer) {
+    clearTimeout(hoverTimer);
+    hoverTimer = null;
+  }
+  hoverTimer = setTimeout(function () {
+    location.href = "../nudgePage/firstnudge.html";
+  }, 5000);
+});
+
+
 const Check3s = document.querySelectorAll('.hover-to-click');
 
 Check3s.forEach(function(Check){
@@ -29,12 +42,6 @@ Array.from(videos).forEach(function(video){
         window.location.hash="";
     };
 });
-
-const nudge=document.getElementById("nudge-page");
-
-function appear(event){
-    console.log("어떻게든 이벤트 발생");
-}
 
 
 

@@ -1,52 +1,7 @@
-:root{
-    --blue_color:#049DD9;
-    --sky_color:#04B2D9;
-    --teal_color:#037F8C;
-    --yello_color:#D9A404;
-    --sand_color:#D9985F;
-}
-@font-face {
-    font-family: 'TheJamsil5Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-body{
-    font-family: 'TheJamsil5Bold',sans-serif;
+body {
     display: flex;
     align-items: center;
     width: 100vw;
-}
-#nudge-page{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
-    position:absolute;
-    justify-content: center;
-    align-items: center;
-    z-index: 1001;
-}
-#nudge-page >div{
-    display: flex;
-    margin-top:100px;
-}
-.nudge-first{ /* display none<->block */
-    color:white;
-    font-size: 128px;
-}
-.nudge-second{ /* display none<->block */
-    display: none;
-    color:white;
-    font-size: 100px;
-    margin-top:100px;
-}
-.nudged{ /*마우스가 움직일때 해당 속성이 추가됨 */
-    display:none;
-}
-.nudged:hover{
-    background-color: rgba(0, 0, 0, 0.2);
 }
 #main-line{
     background-color: black;
@@ -86,7 +41,7 @@ body{
     border-radius: 5px;
     list-style: none;
     transition:box-shadow 0.5s ease-in-out;
-    background-image: url(background.jpg);
+    background-image: url(../source/background.jpg);
     background-clip: text;
     -webkit-background-clip: text;
     background-position: -100px -300px;
