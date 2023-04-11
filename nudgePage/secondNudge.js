@@ -19,15 +19,16 @@ let timeout;
 
 button.addEventListener("mouseover", function () {
   isMouseOver = true;
-  if ((isMouseOver = true)) {
+  if (isMouseOver === true) {
     timeout = setTimeout(function () {
       location.href = "../mainPage/main.html";
     }, 2000);
   }
 });
+
 button.addEventListener("mouseout", function () {
   isMouseOver = false;
-  if ((isMouseOver = false)) {
+  if (isMouseOver === false) {
     clearTimeout(timeout);
   }
 });

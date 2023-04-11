@@ -20,8 +20,16 @@ body {
   border: 2px solid white;
   padding: 30px;
   margin-top: 50px;
+  transition: box-shadow 0.5s ease-in-out;
+  background-image: url(../source/background.jpg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: -100px -300px;
+  transition: 2s ease-in-out;
 }
 
-#invisable{
-  display: none;
+#eyeTrackingButton:hover {
+  box-shadow: 0 2px 10px 5px var(--sky_color);
+  color: transparent;
+  background-position: 100px 100px;
 }

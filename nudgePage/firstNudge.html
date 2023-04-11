@@ -10,30 +10,40 @@
     <div class="nudge-container">
       <img class="nudge" id="nudge-icon" src="../source/feet.png" />
       <p class="nudge">앞에 서 주세요</p>
-      <a href="secondNudge.html" id="transition-link" style="display: none;"></a>
+      <a href="secondNudge.html" id="transition-link" style="display: none"></a>
     </div>
   </body>
   <script>
     /* 웹 보안정책 준수를 위해 HTML에 직접 JS코드 작성*/
-const target = document.querySelector("#transition-target");
-const link = document.querySelector("#transition-link");
+    const target = document.querySelector("#transition-target");
+    const link = document.querySelector("#transition-link");
+    let isMouseOver = false;
+    let animation;
 
-target.addEventListener("mousemove", function () {
-  const animation = target.animate(
-    {
-      transform: ["scale(1)", "scale(1.2)", "scale(1.4)"],
-      opacity: [1, 0],
-    },
-    {
-      duration: 2000,
-      easing: "ease-in-out",
-      fill: "both",
-    }
-  );
+    target.addEventListener("mouseover", function () {
+      isMouseOver = true;
+      animation = target.animate(
+        {
+          transform: ["scale(1)", "scale(1.2)", "scale(1.4)"],
+          opacity: [1, 0],
+        },
+        {
+          duration: 2000,
+          easing: "ease-in-out",
+          fill: "both",
+        }
+      );
 
-  animation.onfinish = function () {
-    link.click();
-  };
-});
-</script>
+      animation.onfinish = function () {
+        if (isMouseOver == true) {
+          link.click();
+        };
+      };
+    });
+
+    target.addEventListener("mouseout", function () {
+      isMouseOver = false;
+      animation.reverse();
+    });
+  </script>
 </html>
