@@ -1,4 +1,4 @@
-// 20초간 입력이 없으면 firstNudge로 넘어감
+// 5초간 입력이 없으면 firstNudge로 넘어감
 let hoverTimer;
 document.addEventListener("mouseover", function () {
   if (hoverTimer) {
