@@ -22,7 +22,7 @@ button.addEventListener("mouseover", function () {
   if (isMouseOver === true) {
     timeout = setTimeout(function () {
       location.href = "../mainPage/main.html";
-    }, 2000);
+    }, 4000);
   }
 });
 

@@ -6,44 +6,18 @@
     <link href="firstNudge.css" rel="stylesheet" />
   </head>
   <body id="transition-target">
-    <p class="nudge">담당부서 안내 서비스</p>
-    <div class="nudge-container">
-      <img class="nudge" id="nudge-icon" src="../source/feet.png" />
-      <p class="nudge">앞에 서 주세요</p>
-      <a href="secondNudge.html" id="transition-link" style="display: none"></a>
-    </div>
+    <iframe id="youtube"
+      src="https://www.youtube.com/embed/PvE-ZTGCLCk?autoplay=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      autoplay
+    ></iframe>
+    <p class="info-top">수영세무서⼁국세청</p>
+    <p class="nudge">부서 안내 서비스</p>
+    <div class="page-opacity"></div>
   </body>
   <script>
-    /* 웹 보안정책 준수를 위해 HTML에 직접 JS코드 작성*/
-    const target = document.querySelector("#transition-target");
-    const link = document.querySelector("#transition-link");
-    let isMouseOver = false;
-    let animation;
-
-    target.addEventListener("mouseover", function () {
-      isMouseOver = true;
-      animation = target.animate(
-        {
-          transform: ["scale(1)", "scale(1.2)", "scale(1.4)"],
-          opacity: [1, 0],
-        },
-        {
-          duration: 2000,
-          easing: "ease-in-out",
-          fill: "both",
-        }
-      );
-
-      animation.onfinish = function () {
-        if (isMouseOver == true) {
-          link.click();
-        };
-      };
-    });
-
-    target.addEventListener("mouseout", function () {
-      isMouseOver = false;
-      animation.reverse();
-    });
   </script>
 </html>

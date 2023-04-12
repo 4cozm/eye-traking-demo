@@ -103,6 +103,8 @@ table {
     --teal_color: #037F8C;
     --yello_color: #D9A404;
     --sand_color: #D9985F;
+    --background: #C1C0B7;
+    --background_font:#3D3A36;
 }
 
 @font-face {
