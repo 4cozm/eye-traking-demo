@@ -10,24 +10,38 @@ body{
 .nudge{
     color: var(--background_font);
     font-size: 128px;
+    margin-bottom: 250px;
     z-index: 10;
-    margin-bottom: 100px;
+}
+.start{
+    color:var(--background_font);
+    font-size: 80px;
+    z-index: 10;
+    position: absolute;
+    top:55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    opacity: 0;
 }
 #youtube{
     height: 100vh;
     width: 100vw;
     position: absolute;
-    top: 5%;
+    top: 3.5%;
     z-index: 1;
 }
 .info-top{
+    height: 30px;
+    width: 98%;
+    padding-left: 2%;
+    background-color: var(--background);
     position: absolute;
     top:1.5%;
-    left:2%;
     z-index: 3;
     color:var(--background_font);
-
 }
+
 .page-opacity{
     position: absolute;
     height: 100vh;
@@ -36,8 +50,4 @@ body{
     opacity: 0.2;
     background-color: var(--background);
     z-index: 2;
-    transition: 5s ease-in-out;
-}
-.page-opacity:hover{
-    opacity: 1;
 }
