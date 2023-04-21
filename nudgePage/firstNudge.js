@@ -1,17 +1,36 @@
-function onYouTubePlayerAPIReady() {
-  player = new YT.Player("youtube", {
-    videoId: "qIgk_1NsLKk",
-    events: {
-      onStateChange: onPlayerStateChange,
-    },
-  });
+const API_KEY = "AIzaSyAbpGHHJR1pWCdRA8amhHXSG6Zt7br3y50";
+const endpoint = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&part=snippet&type=video&eventType=live&maxResults=1&q=${encodeURIComponent(
+  "@BusanLive"
+)}`;
+
+fetch(endpoint, { credentials: "include" })
+  .then((response) => response.json())
+  .then((data) => {
+    const liveVideoId = data.items[0].id.videoId;
+    console.log(`실시간 방송 ID: ${liveVideoId}`);
+    player = new YT.Player("player", {
+      videoId: liveVideoId,
+      events: {
+        onReady: onPlayerReady,
+        onStateChange: onPlayerStateChange,
+      },
+    });
+  })
+  .catch((error) => console.error(error));
+
+function onPlayerReady(event) {
+  // 재생 가능하게 되면 실행
+  event.target.playVideo();
 }
+
 function onPlayerStateChange(event) {
+  // 비디오 상태 변화시 실행
   if (event.data == YT.PlayerState.ENDED) {
-    // 비디오가 종료되거나 로드가 안될때
-    player.loadVideoById("50P-2N6uex4");
+    // 비디오가 종료되면 실행
+    console.log("비디오 종료됨");
   }
 }
+
 const start = document.querySelector(".start");
 const pageOpacity = document.querySelector(".page-opacity");
 let pageMoveTimer;
