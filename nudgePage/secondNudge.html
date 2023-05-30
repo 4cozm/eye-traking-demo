@@ -5,9 +5,36 @@
     <link href="../source/reset.css" rel="stylesheet" />
     <link href="secondNudge.css" rel="stylesheet" />
   </head>
+  <audio id="ui-move" preload="auto">
+  <source src="https://cdn.glitch.global/fb136b0b-a9f8-49c9-8c73-48c1e803d27c/ui_move.mp3?v=1684482776109" type="audio/mp3">
+</audio>
+  <audio id="button-pressed" preload="auto">
+  <source src="https://cdn.glitch.global/fb136b0b-a9f8-49c9-8c73-48c1e803d27c/button_pressed.mp3?v=1684482775146" type="audio/mp3">
+</audio>
   <body id="transition-target">
-    <p class="nudge">눈 위치를 감지 중입니다</p>
-    <div id="eyeTrackingButton">확인</div>
+    <div class="nudge-container">
+      <span class="nudge">눈</span>
+      <span class="nudge">위</span>
+      <span class="nudge">치</span>
+      <span class="nudge">를</span>
+      <span class="nudge">감</span>
+      <span class="nudge">지</span>
+      <span class="nudge">중</span>
+      <span class="nudge">입</span>
+      <span class="nudge">니</span>
+      <span class="nudge">다</span>
+    </div>
+    <div id="eyeTrackingButton" class="button">확인</div>
+    <div class="eye-container">
+      <svg class="eye" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle class="eye-white" cx="50" cy="50" r="50" />
+        <circle class="eye-ball" cx="50" cy="50" r="20" />
+      </svg>
+      <svg class="eye" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle class="eye-white" cx="50" cy="50" r="50" />
+        <circle class="eye-ball" cx="50" cy="50" r="20" />
+      </svg>
+    </div>
   </body>
   <script src="secondNudge.js"></script>
 </html>

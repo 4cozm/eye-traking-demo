@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-    <link href="../source/reset.css" rel="stylesheet"/>
-    <link href="main.css" rel="stylesheet"/>
-</head>
-<body>
-
+  <head>
+    <meta charset="utf-8" />
+    <link href="../source/reset.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+  </head>
+  <audio id="ui-move" preload="auto">
+  <source src="https://cdn.glitch.global/fb136b0b-a9f8-49c9-8c73-48c1e803d27c/ui_move.mp3?v=1684482776109" type="audio/mp3">
+</audio>
+  <audio id="button-pressed" preload="auto">
+  <source src="https://cdn.glitch.global/fb136b0b-a9f8-49c9-8c73-48c1e803d27c/button_pressed.mp3?v=1684482775146" type="audio/mp3">
+</audio>
+  <body>
     <div id="side-bar">
-        <div id="side-bar-title-container">
-            <p id="side-bar-title">자주 찾는 메뉴</p>
-        </div>
-        <ul id="side-bar-item-container">
-            <a href="#rmsfhwkdfurma" class="side-bar-items hover-to-click">근로장려금</a>
-                <div class="side-bar-item-popup" id="rmsfhwkdfurma" >
-                    <h2>근로장려금 담당 부서 찾아가기</h2>
-                    <video class="side-bar-video" src="../source/test.mp4" autoplay muted preload="none"></video>
-                </div>
-            <a href="#tkdjqwkemdfhrwmd" class="side-bar-items hover-to-click">사업자등록증</a>
-                <div class="side-bar-item-popup" id="tkdjqwkemdfhrwmd" >
-                    <h2>사업자등록증 담당 부서 찾아가기</h2>
-                    <video class="side-bar-video"></video>
-                </div>
-            <a href="vortmvmflsxj" class="side-bar-items hover-to-click">팩스/프린터</a>
-                <div class="side-bar-item-popup" id="vortmvmflsxj" >
-                    <h2>팩스/프린터 안내</h2>
-                    <video class="side-bar-video"></video>
-                </div>
-            <a href="rkwhrrhksrPemdfhrwmd" class="side-bar-items hover-to-click">가족관계등록증</a>
-                <div class="side-bar-item-popup" id="rkwhrrhksrPemdfhrwmd" >
-                    <h2>가족관계증명서 출력방법</h2>
-                    <video class="side-bar-video"></video>
-                </div>
-            <a href="emdrlqnemdqhs" class="side-bar-items hover-to-click">등기부 등본</a>
-                <div class="side-bar-item-popup" id="emdrlqnemdqhs" >
-                    <h2>등기부 등본 출력방법</h2>
-                    <video class="side-bar-video"></video>
-                </div>
-        </ul>
+      <div id="side-bar-title-container">
+        <p id="side-bar-title">자주 찾는 메뉴</p>
+      </div>
+      <ul id="side-bar-item-container">
+        <!-- 사이드바 시작 -->
+        <a class="side-bar-items button-side">근로장려금</a>
+
+        <a class="side-bar-items button-side">사업자등록증</a>
+
+        <a class="side-bar-items button-side">팩스/프린터</a>
+
+        <a class="side-bar-items button-side">가족관계등록증</a>
+
+        <a class="side-bar-items button-side">등기부 등본</a>
+      </ul>
+      <!-- 사이드 바 종료 -->
     </div>
     <div id="main-line"></div>
     <div id="main-content">
-        <ul id="main-content-circle">
-            <li class="hover-to-click" id="content-1"><a>부가세 소득세</a></li>
-            <li class="hover-to-click" id="content-2"><a>증명원,서류발급</a></li>
-            <li class="hover-to-click" id="content-3"><a>양도세 증여세</a></li>
-            <li class="hover-to-click" id="content-4"><a>세금 납부</a></li>
-            <li class="hover-to-click" id="content-5"><a>시즌 세무업무</a></li>
-        </ul>
-        <div id="font-size-container">
-            <div class="giho">-</div>
-            <div>글자크기 변경</div>
-            <div class="giho">+</div>
-        </div>
+      <!--메인 콘텐츠 -->
+      <div class="navigator">
+      </div>
+      <ul id="main-content-container">
+        <li class="hover-to-click main-content-bar button-main" id="content-1">
+          <a>국세 개인 안내</a>
+          <div class="expanded-div hidden"></div>
+        </li>
+        <li class="hover-to-click main-content-bar button-main" id="content-2">
+          <a>증명원/서류발급</a>
+          <div class="expanded-div hidden"></div>
+        </li>
+        <li class="hover-to-click main-content-bar button-main" id="content-3">
+          <a>국세 법인 안내</a>
+          <div class="expanded-div hidden"></div>
+        </li>
+        <li class="hover-to-click main-content-bar button-main" id="content-4">
+          <a>세금 카드/납부 방법</a>
+          <div class="expanded-div hidden"></div>
+        </li>
+        <li class="hover-to-click main-content-bar button-main" id="content-5"><a>기타 안내</a>
+        <div class="expanded-div hidden"></div></li>
+      </ul>
     </div>
+    <div id="redBall" style="width: 15px; height: 15px; background-color: red; position: absolute; opacity: 0;"></div> <!--목적지를 표시해주는 작은 빨간 공-->
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
